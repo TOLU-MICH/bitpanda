@@ -5,3 +5,16 @@
 .security {
   transition: max-height 0.6s ease;
 }
+
+@media screen and (min-width: 1024px) {
+  .active {
+    @apply bg-white rounded-l-xl text-gray-900;
+  }
+
+  .active::before {
+    @apply content-["_"] bg-black absolute w-[27px] h-6 shadow-[15px_15px_0_15px_#fff] rounded-br-[10px] right-0 -top-6;
+  }
+  .active::after {
+    @apply content-["_"] bg-black absolute w-[27px] h-6 shadow-[15px_-15px_0_15px_#fff] rounded-tr-[10px] right-0 -bottom-6;
+  }
+}
