@@ -7,7 +7,7 @@ const SubHero = ({ data, btn }) => {
     <div className="max-w-screen-xl w-full m-auto py-5">
       <section className="flex flex-col md:flex-row">
         {data.map((item, index) => (
-          <HeroCard data={item} key={index} btn={btn} />
+          <HeroCard data={item} key={index} btn={btn} border />
         ))}
       </section>
     </div>

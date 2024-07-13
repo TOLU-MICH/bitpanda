@@ -12,37 +12,44 @@ import Register from "./pages/Register.jsx";
 import DashBoard from "./pages/DashBoard.jsx";
 import Modaler from "./component/dashboard/Modaler.jsx";
 import Wallet from "./pages/Wallet.jsx";
+import Navigation from "./component/navigation/Navigataion.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <HomePage />,
+    path: "",
+    element: <Navigation />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "blog/",
+        element: <Blog />,
+      },
+      {
+        path: "academy/",
+        element: <Academy />,
+      },
+      {
+        path: "security/",
+        element: <Security />,
+      },
+      {
+        path: "auth/login/",
+        element: <Login />,
+      },
+      {
+        path: "auth/register/",
+        element: <Register />,
+      },
+      {
+        path: "dashboard/",
+        element: <DashBoard />,
+      },
+      { path: "dashboard/wallet/", element: <Wallet /> },
+    ],
   },
-  {
-    path: "blog/",
-    element: <Blog />,
-  },
-  {
-    path: "academy/",
-    element: <Academy />,
-  },
-  {
-    path: "security/",
-    element: <Security />,
-  },
-  {
-    path: "auth/login/",
-    element: <Login />,
-  },
-  {
-    path: "auth/register/",
-    element: <Register />,
-  },
-  {
-    path: "dashboard/",
-    element: <DashBoard />,
-  },
-  { path: "dashboard/wallet/", element: <Wallet /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

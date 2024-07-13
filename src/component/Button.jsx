@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Button = ({ text, style }) => {
+const Button = ({ text, style, link }) => {
   return (
     <button
       type="button"
@@ -9,7 +10,7 @@ const Button = ({ text, style }) => {
         style
       }
     >
-      {text}
+      <Link to={link ? link : "/auth/register/"}>{text}</Link>
     </button>
   );
 };

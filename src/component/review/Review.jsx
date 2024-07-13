@@ -5,12 +5,12 @@ import ReviewContainer from "./ReviewContainer";
 
 const Review = () => {
   return (
-    <section className="max-w-screen-xl m-auto pb-20">
+    <section className="max-w-screen-xl m-auto pb-20" id="review">
       <div className="py-6 md:py-20 px-[15px]">
-        <h3 className="text-gray-400 font-bold text-xl md:text-center mb-5">
+        <h3 className="text-gray-400 font-bold text-base md:text-xl md:text-center mb-0 md:mb-5">
           Reviews
         </h3>
-        <h1 className="font-bold text-3xl md:text-5xl md:text-center ">
+        <h1 className="font-bold text-3xl lg:text-5xl md:text-center ">
           Don't just take our word for it
         </h1>
       </div>

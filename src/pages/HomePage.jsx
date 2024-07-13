@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navigation from "../component/navigation/Navigataion";
 import HeroBoard from "../component/HeroBoard";
 import Hero from "../component/Hero";
@@ -41,7 +41,7 @@ const data = [
 const HomePage = () => {
   return (
     <>
-      <Navigation />
+      {/* <Navigation /> */}
       <HeroBoard />
       <Hero />
       <SubHero data={data} />

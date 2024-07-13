@@ -1,7 +1,14 @@
 import React from "react";
 import Button from "./Button";
 
-const Card = ({ data, half = false, style = "bg-white", color, text }) => {
+const Card = ({
+  data,
+  half = false,
+  style = "bg-white",
+  color,
+  text,
+  link,
+}) => {
   return (
     <section
       className={
@@ -26,12 +33,14 @@ const Card = ({ data, half = false, style = "bg-white", color, text }) => {
             </p>
           )}
           {data.title && (
-            <h2 className="text-4xl leading-[3rem] md:text-5xl font-bold mb-5 md:leading-[4rem]">
+            <h2 className="text-2xl md:leading-[3rem] md:text-5xl font-bold mb-5 lg:leading-[4rem]">
               {data.title}
             </h2>
           )}
-          {data.desc && <p className="text-2xl leading-9 mb-6">{data.desc}</p>}
-          <Button text={text ? text : "Read more"} style={color} />
+          {data.desc && (
+            <p className="text-lg md:text-2xl md:leading-9 mb-6">{data.desc}</p>
+          )}
+          <Button text={text ? text : "Read more"} style={color} link={link} />
         </div>
         {data.img && (
           <div

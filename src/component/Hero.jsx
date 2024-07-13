@@ -23,7 +23,10 @@ const data = [
 
 const Hero = ({ title }) => {
   return (
-    <section className="w-full h-fit md:h-[calc(100vh-50px)] px-[15px] py-10 md:p-20">
+    <section
+      className="w-full h-fit md:h-[calc(100vh-50px)] px-[15px] mt-10 pb-10 md:p-20"
+      id="why-us"
+    >
       <div className="md:max-w-screen-xl md:flex mx-auto justify-center items-center">
         <div className="md:pl-12 md:max-w-[50%] w-full ">
           <h1 className="font-bold text-[42px] md:text-[55px] leading-[3rem] md:leading-[3.8rem]">

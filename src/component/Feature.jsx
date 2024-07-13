@@ -33,35 +33,40 @@ const data2 = [
 ];
 const Feature = () => {
   return (
-    <section className="bg-gray-200 pb-20">
-      <section className="max-w-screen-xl m-auto ">
-        <section className="py-6 md:py-20 px-[15px]">
-          <h3 className="text-gray-400 font-bold text-xl md:text-center mb-5">
-            Feature
-          </h3>
-          <h1 className="font-bold text-3xl md:text-5xl md:text-center ">
-            More than an investment platform
-          </h1>
-        </section>
-
-        <Card data={data} color={"white"} />
-        <section className="flex flex-wrap w-full">
-          {data2.map((item, index) => (
-            <Card
-              data={item}
-              half={true}
-              key={index}
-              style={item.style}
-              color={item.color && item.color}
+    <div className="" id="features">
+      <section className="bg-gray-200 pb-20">
+        <section className="max-w-screen-xl m-auto ">
+          <section className="py-6 md:py-20 px-[15px]">
+            <h3 className="text-gray-400 font-bold text-xl md:text-center mb-5">
+              Feature
+            </h3>
+            <h1 className="font-bold text-3xl md:text-5xl md:text-center ">
+              More than an investment platform
+            </h1>
+          </section>
+          <Card data={data} color={"white"} link={"/academy"} />
+          <section className="flex flex-wrap w-full">
+            {data2.map((item, index) => (
+              <Card
+                data={item}
+                half={true}
+                key={index}
+                style={item.style}
+                color={item.color && item.color}
+                link={"academy"}
+              />
+            ))}
+          </section>
+          <section className="w-full flex justify-center items-center">
+            <Button
+              style={"!p-[10px_30px] md:!p-[14px_40px] !text-lg md:!text-xl"}
+              text={"See all features"}
+              link={"academy"}
             />
-          ))}
-        </section>
-
-        <section className="w-full flex justify-center items-center">
-          <Button style={"!p-[14px_40px] !text-xl"} text={"See all features"} />
+          </section>
         </section>
       </section>
-    </section>
+    </div>
   );
 };
 

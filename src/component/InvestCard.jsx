@@ -58,8 +58,10 @@ const InvestCard = () => {
             key={index}
           >
             <div className="p-[40px_30px]">
-              <h3 className="text-4xl font-bold mb-5 ">{item.name}</h3>
-              <p className="text-xl">{item.desc}</p>
+              <h3 className="text-2xl md:text-4xl font-bold mb-5 ">
+                {item.name}
+              </h3>
+              <p className="text-lg md:text-xl">{item.desc}</p>
             </div>
             <img src={item.img} />
           </div>

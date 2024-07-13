@@ -2,13 +2,16 @@ import React, { Ref, RefObject } from "react";
 import chevron from "../../assets/chevron.svg";
 import btc from "../../assets/btc.svg";
 import eth from "../../assets/eth.svg";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const investData = [
   { name: "Bitcoin", acronym: "BTC", img: btc },
   { name: "Ethereum", acronym: "ETH", img: eth },
 ];
 
-const NavigationList = ({ list, style }) => {
+const NavigationList = ({ list, style, func }) => {
+  const { pathname } = useLocation();
+  console.log(pathname);
   return (
     <ul
       className={
@@ -19,13 +22,13 @@ const NavigationList = ({ list, style }) => {
       {list.map((item, index) => {
         return (
           <li className="group relative hover:after:content-[''] hover:after:h-[2px] hover:after:w-full hover:after:bg-[#27d17f] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:rounded-full transition-all hover:cursor-pointer">
-            {index === 0 ? (
-              <section className="relative">
+            {index === 4 ? (
+              <section className="relative hidden lg:block">
                 <span className="flex gap-2">
-                  {item}
+                  {item.name}
                   <img src={chevron} alt="Drop down arrow" className="w-3" />
                 </span>
-                <div className="w-max h-max absolute shadow-lg p-8 -left-28 invisible group-hover:visible">
+                <div className="w-max h-max absolute shadow-lg p-8 -left-28 invisible group-hover:visible lg:bg-white">
                   <h3 className="font-bold text-xl leading-8">Invest in:</h3>
                   <h4 className="font-semibold leading-8">CryptoCurrencies</h4>
                   <p className="mb-4 text-gray-400 leading-5">
@@ -49,8 +52,25 @@ const NavigationList = ({ list, style }) => {
                 className="block py-2 px-3 md:p-0 text-black rounded md:bg-transparent "
                 aria-current="page"
                 key={index}
+                href={item.scroll ? null : item.link}
+                onClick={async () => {
+                  if (item.scroll) {
+                    pathname === "/"
+                      ? null
+                      : await location.replace(`/${item.link}`);
+                    const position = document.querySelector(`${item.link}`);
+                    window.scrollTo({
+                      top:
+                        position.getBoundingClientRect().top +
+                        window.scrollY -
+                        100,
+                    });
+                  }
+
+                  func();
+                }}
               >
-                {item}
+                {item.name}
               </a>
             )}
           </li>

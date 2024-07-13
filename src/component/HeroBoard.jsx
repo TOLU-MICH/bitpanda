@@ -3,7 +3,7 @@ import heroImg from "../assets/hero-img.png";
 
 const HeroBoard = () => {
   return (
-    <section className="bg-black flex items-center justify-center">
+    <section className="bg-black flex items-center justify-center ">
       <div className="max-w-screen-xl flex items-center p-2">
         <div className="max-w-[50%] md:max-w-52 p-[5px] pb-0 w-full border-b border-b-[#27d17f]">
           <img src={heroImg} alt="" />

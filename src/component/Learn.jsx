@@ -10,12 +10,12 @@ const data = {
 
 const Learn = () => {
   return (
-    <section className="max-w-screen-xl m-auto pb-20">
+    <section className="max-w-screen-xl m-auto pb-20" id="learn">
       <div className="py-6 md:py-20 px-[15px]">
-        <h3 className="text-gray-400 font-bold text-xl md:text-center mb-5">
+        <h3 className="text-gray-400 font-bold text-base md:text-xl md:text-center mb-0 md:mb-5">
           Learn
         </h3>
-        <h1 className="font-bold text-3xl md:text-5xl md:text-center ">
+        <h1 className="font-bold text-3xl lg:text-5xl md:text-center ">
           Boost your financial literacy skills
         </h1>
       </div>
@@ -25,6 +25,7 @@ const Learn = () => {
           data={data}
           text={"Visit Academy"}
           style="bg-[#28d180] text-white"
+          link={"academy"}
         />
       </section>
     </section>
