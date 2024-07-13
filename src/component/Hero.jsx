@@ -54,7 +54,7 @@ const Hero = ({ title }) => {
           </p>
 
           {/* hero overlay */}
-          <section className="w-[247px] absolute top-0 pt-24 z-10 pl-[10px] hidden md:block">
+          <section className="w-[247px] absolute top-0 pt-12 md:pt-24 z-10 pl-[10px] block">
             {data.map((item, index) => (
               <div
                 className="mb-2 p-[14px_20px] flex justify-between items-center w-full border-[2px] border-[#ebebeb] rounded-xl relative backdrop-blur-md bg-opacity-50 bg-[#f5f5f58a] shadow-xl shadow-[#0000000c]"
