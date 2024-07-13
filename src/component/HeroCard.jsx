@@ -18,11 +18,11 @@ const HeroCard = ({ data, border = true, btn = true }) => {
         />
       )}
       <div>
-        <h1 className="text-2xl md:text-3xl font-bold text-left md:text-center md:my-2">
+        <h1 className="text-2xl md:text-3xl font-bold text-center md:my-2">
           {data.name}
         </h1>
         {data.text.length == 2 ? (
-          <p className="text-lg text-gray-600 text-left md:text-center my-1 md:my-2  flex flex-wrap gap-x-1">
+          <p className="text-lg text-gray-600 text-center my-1 md:my-2  flex flex-wrap gap-x-1 w-fit">
             <span>
               <strong>{data.bold[0]}</strong> {data.text[0]}
             </span>
@@ -31,8 +31,8 @@ const HeroCard = ({ data, border = true, btn = true }) => {
             </span>
           </p>
         ) : (
-          <p className="text-lg text-gray-600 text-left md:text-center my-1 md:my-2">
-            <strong>{data.bold}</strong> {data.text}
+          <p className="text-lg text-gray-600 text-center my-1 md:my-2 flex flex-wrap gap-x-1 justify-center">
+            {data.bold && <strong>{data.bold}</strong>} {data.text}
           </p>
         )}
       </div>

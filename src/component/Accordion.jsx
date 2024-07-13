@@ -18,14 +18,14 @@ const Accordion = ({ data }) => {
           onClick={() => handleClick(index)}
           key={index}
         >
-          <span className="flex justify-between px-10 py-5 items-center ">
-            <h2 className="font-medium text-xl md:text-2xl text-left">
+          <span className="flex justify-between px-5 md:px-10 py-5 items-start">
+            <h2 className="font-medium text-base md:text-2xl text-left">
               {item.title}
             </h2>
             <img
               src={faq}
               alt=""
-              className={`h-fit  transition-transform duration-300 ease-in-out ${
+              className={`h-fit w-2.5  transition-transform duration-300 ease-in-out mt-2 ${
                 visibility === index ? "rotate-[90deg]" : "rotate-45"
               }`}
             />
