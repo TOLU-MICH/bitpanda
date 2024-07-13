@@ -52,7 +52,7 @@ const Register = () => {
     }
   };
   return (
-    <section className="h-screen flex flex-col">
+    <section className="md:h-screen">
       <div className="flex flex-col items-center justify-center px-6 py-8 m-auto md:h-screen lg:py-0 w-full">
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -60,7 +60,7 @@ const Register = () => {
               <img src={nextLogo} alt="" className="w-16" />
             </Link>
             <h1 className="text-center text-lg font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
-              Sign in to your account
+              create an account with us today
             </h1>
             <form method="POST" className="space-y-5" onSubmit={handleSubmit}>
               <div className="w-full  max-w-[400px]">
@@ -121,7 +121,7 @@ const Register = () => {
                         className="hover:cursor-pointer w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
                       />
                     </div>
-                    <div className="ml-3 text-xs sm:text-sm ">
+                    <div className="ml-3 text-sm ">
                       <label
                         htmlFor="remember"
                         className="text-gray-500 dark:text-gray-300 hover:cursor-pointer"
@@ -132,13 +132,13 @@ const Register = () => {
                   </div>
 
                   <Link>
-                    <p className="text-xs sm:text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+                    <p className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
                       Forgot password?
                     </p>
                   </Link>
                 </div>
 
-                <p className="text-xs sm:text-sm font-light text-gray-500 dark:text-gray-400 my-4">
+                <p className="text-sm font-light text-gray-500 dark:text-gray-400 my-4">
                   Already have an account?{" "}
                   <Link to={"/auth/login"}>
                     <span className="font-medium text-[inherit] text-blue-600 hover:underline dark:text-blue-500">
