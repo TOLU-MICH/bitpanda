@@ -21,7 +21,7 @@ function Password({ label, pswdRef }) {
     <div className="relative">
       <label
         htmlFor={label || "Password"}
-        className="block mb-2 text-xs sm:text-sm font-bold text-gray-900"
+        className="block mb-2 text-base font-bold text-gray-900"
       >
         {label || "Password"}
       </label>
@@ -30,14 +30,14 @@ function Password({ label, pswdRef }) {
         name="username"
         id={label || "Password"}
         placeholder="••••••••"
-        className="bg-gray-50 border border-gray-300 text-gray-900 text-xs sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5  dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5  dark:focus:ring-blue-500 dark:focus:border-blue-500"
         required={true}
         ref={pswdRef}
       />
       <img
         src={image ? hidePsw : viewPsw}
         alt=""
-        className="w-5 absolute right-3 z-20 top-[2.1rem] sm:top-10 cursor-pointer"
+        className="w-5 absolute right-3 z-20 top-[2.7rem] sm:top-10 cursor-pointer"
         onClick={() => setImage(togglePassword())}
       />
     </div>

@@ -52,11 +52,13 @@ const Register = () => {
     }
   };
   return (
-    <section className=" h-screen">
-      <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+    <section className="h-screen flex flex-col">
+      <div className="flex flex-col items-center justify-center px-6 py-8 m-auto md:h-screen lg:py-0 w-full">
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <img src={nextLogo} alt="" className="w-16" />
+            <Link to={"/"}>
+              <img src={nextLogo} alt="" className="w-16" />
+            </Link>
             <h1 className="text-center text-lg font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
               Sign in to your account
             </h1>
@@ -64,14 +66,14 @@ const Register = () => {
               <div className="w-full  max-w-[400px]">
                 <label
                   htmlFor="username"
-                  className="block mb-2 text-xs sm:text-sm font-bold text-gray-900 "
+                  className="block mb-2 text-base font-bold text-gray-900 "
                 >
                   Username:
                 </label>
                 <input
                   name="username"
                   type="text"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-xs sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Your Username"
                   ref={username}
                 />
@@ -84,14 +86,14 @@ const Register = () => {
               <div className="w-full  max-w-[400px]">
                 <label
                   htmlFor="Email"
-                  className="block mb-2 text-xs sm:text-sm font-bold text-gray-900 "
+                  className="block mb-2 text-base font-bold text-gray-900 "
                 >
                   Email:
                 </label>
                 <input
                   name="Email"
                   type="email"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-xs sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Your Email"
                   ref={email}
                   required
@@ -129,7 +131,7 @@ const Register = () => {
                     </div>
                   </div>
 
-                  <Link href={"/auth/reset-password"}>
+                  <Link>
                     <p className="text-xs sm:text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
                       Forgot password?
                     </p>
@@ -138,7 +140,7 @@ const Register = () => {
 
                 <p className="text-xs sm:text-sm font-light text-gray-500 dark:text-gray-400 my-4">
                   Already have an account?{" "}
-                  <Link href={"/auth/login"}>
+                  <Link to={"/auth/login"}>
                     <span className="font-medium text-[inherit] text-blue-600 hover:underline dark:text-blue-500">
                       Log in
                     </span>
@@ -147,7 +149,7 @@ const Register = () => {
 
                 <input
                   type="submit"
-                  className="hover:cursor-pointer w-full bg-slate-900 rounded-md text-white text-bold px-3 py-1 md:py-2 text-xs sm:text-base font-semibold leading-6 shadow-sm hover:bg-slate-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="hover:cursor-pointer w-full bg-slate-900 rounded-md text-white text-bold px-3 py-2 text-base font-semibold leading-6 shadow-sm hover:bg-slate-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 />
               </div>
             </form>
